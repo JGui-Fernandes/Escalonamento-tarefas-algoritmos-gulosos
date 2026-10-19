@@ -8,7 +8,7 @@ public class IntervalSchedulingApp {
         warmUp();
 
         runTest("Teste 1 - Pequena instância", IntervalInstances.small(), true, true);
-        runTest("Teste 2 - Média instância", IntervalInstances.medium(), true, true);
+        runTest("Teste 2 - Média instância", IntervalInstances.medium(), false, true);
         runTest("Teste 3 - Grande instância (100000 intervalos)",
                 IntervalInstances.large(100_000), false, false);
     }
@@ -52,7 +52,7 @@ public class IntervalSchedulingApp {
         }
 
         System.out.println();
-        printResult(result, traceDecisions); // no teste passo-a-passo, imprime tudo
+        printResult(result, traceDecisions);
         System.out.printf("Tempo de execução: %.3f ms%n", timeMs);
     }
 
